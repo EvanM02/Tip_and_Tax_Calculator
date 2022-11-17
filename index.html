@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip and Tax Calculator</title>
+    <link rel="icon" href="./Images/calculator.png" type="image/icon" />
+    <!-- bootstrap links-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JavaScript/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./CSS/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/tablet_landscape.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/tablet_portrait.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/desktop.css" />
+  </head>
+  <body>
+    <main>
+      <!--OTHER WEBSITE LINKS DROPDOWN MENU-->
+      <div class="dropdown navbar-light">
+        <a
+          class="btn btn-secondary dropdown-toggle border-1"
+          role="button"
+          id="dropdownMenuLink"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Websites
+        </a>
+        <ul
+          class="dropdown-menu navbar-light bg-secondary"
+          aria-labelledby="dropdownMenuLink"
+        >
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Portfolio-Website/"
+              >Portfolio Website</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Academy_Cinemas/"
+              >Academy Cinemas Website</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Slideshow_and_Countdown/"
+              >SlideShow and Countdown</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Single_page_Website/"
+              >Single Page Website</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Calculator_App/"
+              >Calculator App</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/The_Space_Station/"
+              >The Space Station Website</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Tic_Tac_Toe/"
+              >Tic Tac Toe</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/Pizza_Website/"
+              >Pizza Website
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="https://evanm02.github.io/To_Do_App/"
+              >To Do App</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="https://evanm02.github.io/tip-calculator/"
+              >Tip Calculator</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!--END OF DROP DOWN MENU-->
+
+      <div id="heading_container">
+        <h1 id="header">The tip and tax calculator</h1>
+        <p id="heading_para">
+          Enjoy a simple ad free experience. Just type your numbers in the
+          fields below.
+        </p>
+      </div>
+
+      <div id="two_buttons">
+        <!--User will click this button to change into the alt function of this website-->
+        <button id="alt_fun" onclick="startAltFun()">Tax Only</button>
+
+        <!-- This refreshes the browser-->
+        <button id="refresh_page" onclick="refreshPage()">Reload Window</button>
+      </div>
+
+      <!--Input fields for users to type in numbers-->
+      <div id="input_fields">
+        <input
+          type="number"
+          placeholder="Input Tip Percentage"
+          id="input_percentage"
+        />
+        <br />
+        <br />
+        <input
+          type="number"
+          placeholder="Input Tax Percentage"
+          id="input_tax"
+        />
+        <br />
+        <br />
+        <input type="number" placeholder="Input Amount" id="input_sum" />
+        <br />
+        <!-- User will click button when they are done typing the required numbers -->
+        <button id="submit" onkeypress="launch()" onclick="launch()">
+          Submit
+        </button>
+      </div>
+
+      <!-- This is where javascript is gonna inject that template literal-->
+      <p id="user_sum"></p>
+
+      <!-- This is the dialog box that will popup when user doesn't meet necessary requirements of the input fields-->
+      <dialog id="dialog">
+        <p id="words">
+          Please make sure all fields are filled out and have no negative
+          numbers
+        </p>
+        <button id="hide" onclick="closePopUp()">Close</button>
+      </dialog>
+    </main>
+  </body>
+</html>
