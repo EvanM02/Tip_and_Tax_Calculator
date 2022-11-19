@@ -108,7 +108,7 @@ function launch() {
 }
 
 function refreshPage() {
-  window.location.reload();
+  window.location.reload(true);
 }
 
 // We are making a variable and giving it the value of input_sum
