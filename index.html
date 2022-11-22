@@ -18,10 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./JavaScript/main.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="./CSS/mobile.css" />
-    <link rel="stylesheet" type="text/css" href="./CSS/tablet_landscape.css" />
-    <link rel="stylesheet" type="text/css" href="./CSS/tablet_portrait.css" />
-    <link rel="stylesheet" type="text/css" href="./CSS/desktop.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/main.css">
   </head>
   <body>
     <main>
@@ -111,58 +108,65 @@
         </ul>
       </div>
       <!--END OF DROP DOWN MENU-->
+      <div class="grid">
+        <div id="heading_container">
+          <h1 id="header">The tip and tax calculator</h1>
+          <p id="heading_para">
+            Enjoy this simple ad free experience. Just type your numbers in the
+            fields below.
+          </p>
+        </div>
+  
+        <div id="two_buttons">
+          <!--User will click this button to change into the alt function of this website-->
+          <button id="alt_fun" onclick="startAltFun()">Tax Only</button>
+  
+          <!-- This refreshes the browser-->
+          <button id="refresh_page" onclick="refreshPage()">Reload Window</button>
+        </div>
+  
+        <!--Input fields for users to type in numbers-->
+        <div id="input_fields">
+          <input
+            type="number"
+            placeholder="Input Tip Percentage"
+            id="input_percentage"
+          />
+          <br />
+          <br />
+          <input
+            type="number"
+            placeholder="Input Tax Percentage"
+            id="input_tax"
+          />
+          <br />
+          <br />
+          <input type="number" placeholder="Input Amount" id="input_sum" />
+          <br />
 
-      <div id="heading_container">
-        <h1 id="header">The tip and tax calculator</h1>
-        <p id="heading_para">
-          Enjoy this simple ad free experience. Just type your numbers in the
-          fields below.
-        </p>
+          <!-- User will click button when they are done typing the required numbers -->
+          <button id="submit" onkeypress="launch()" onclick="launch()">
+            Submit
+          </button>
+        </div>
+  
+        <!-- This is where javascript is gonna inject that template literal-->
+        <div class="java_injection">
+          <p id="user_sum"></p>
+        </div>
+  
+        <!-- This is the dialog box that will popup when user doesn't meet necessary requirements of the input fields-->
+        <dialog id="dialog">
+          <p id="words">
+            Please make sure all fields are filled out and have no negative
+            numbers
+          </p>
+          <button id="hide" onclick="closePopUp()">Close</button>
+        </dialog>
       </div>
 
-      <div id="two_buttons">
-        <!--User will click this button to change into the alt function of this website-->
-        <button id="alt_fun" onclick="startAltFun()">Tax Only</button>
+      <!--End of grid-->
 
-        <!-- This refreshes the browser-->
-        <button id="refresh_page" onclick="refreshPage()">Reload Window</button>
-      </div>
-
-      <!--Input fields for users to type in numbers-->
-      <div id="input_fields">
-        <input
-          type="number"
-          placeholder="Input Tip Percentage"
-          id="input_percentage"
-        />
-        <br />
-        <br />
-        <input
-          type="number"
-          placeholder="Input Tax Percentage"
-          id="input_tax"
-        />
-        <br />
-        <br />
-        <input type="number" placeholder="Input Amount" id="input_sum" />
-        <br />
-        <!-- User will click button when they are done typing the required numbers -->
-        <button id="submit" onkeypress="launch()" onclick="launch()">
-          Submit
-        </button>
-      </div>
-
-      <!-- This is where javascript is gonna inject that template literal-->
-      <p id="user_sum"></p>
-
-      <!-- This is the dialog box that will popup when user doesn't meet necessary requirements of the input fields-->
-      <dialog id="dialog">
-        <p id="words">
-          Please make sure all fields are filled out and have no negative
-          numbers
-        </p>
-        <button id="hide" onclick="closePopUp()">Close</button>
-      </dialog>
     </main>
   </body>
 </html>
