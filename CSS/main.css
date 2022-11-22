@@ -1,0 +1,48 @@
+/* This is the styling for smartphones */
+
+@media screen and (max-width: 500px) {
+    .grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1 1fr, 2 1fr, 3 1fr, 4 1fr,;
+    }
+    #heading_container {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 1;
+    }
+    #heading_container h1 {
+        font-size: 1.5rem;
+        color: brown;
+        text-align: center;
+    }
+    #heading_container p {
+        color: blueviolet;
+    }
+    .tax_reload_buttons {
+        grid-column-start: 1;
+        grid-column-start: span 2;
+        grid-row-start: 2;
+    }
+    #input_fields {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 3;
+    }
+    .java_injection {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 4;
+    }
+    #dialog {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 1;
+    }
+
+
+
+
+  }
