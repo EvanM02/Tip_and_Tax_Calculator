@@ -1,11 +1,15 @@
 /* This is the styling for smartphones */
 
 @media screen and (max-width: 500px) {
+    body {
+        background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    }
     .grid {
         display: grid;
         gap: 1.5rem;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1 1fr, 2 1fr, 3 1fr, 4 1fr,;
+        place-items: center;
     }
     #heading_container {
         text-align: center;
@@ -15,27 +19,97 @@
     }
     #heading_container h1 {
         font-size: 1.5rem;
-        color: brown;
+        font-variant: small-caps ;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
         text-align: center;
+
+        color: black;
+        
     }
     #heading_container p {
-        color: blueviolet;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Courier ', Courier, monospace;
+    font-weight: 300;
     }
-    .tax_reload_buttons {
-        grid-column-start: 1;
-        grid-column-start: span 2;
+
+    #alt_fun {
+        grid-column-start: 1 ;
+        grid-row-start: 2 ;
+    }
+    #refresh_page {
+        grid-column-start: 2;
         grid-row-start: 2;
+
     }
+    #alt_fun, #refresh_page {
+        /* border-radius: 8px;
+        box-shadow: 2px 2px green;
+        background-color: #553c9a; */
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 12px;
+        box-shadow: 3px 3px black;
+        color: whitesmoke;
+        background-color: lightslategray;
+    }
+
     #input_fields {
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row-start: 3;
+        place-items: center;
     }
+    #input_percentage {
+        border-radius: 12px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        height: 7mm;
+      }
+      #input_percentage::placeholder {
+        padding-left: 10px;
+      }
+    
+      #input_tax {
+        border-radius: 12px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        height: 7mm;
+      }
+      #input_tax::placeholder {
+        padding-left: 10px;
+      }
+    
+      #input_sum {
+        border-radius: 12px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        height: 7mm;
+      }
+      #input_sum::placeholder {
+        padding-left: 10px;
+      }
+    
+      #submit {
+        margin-top: 10px;
+        border-radius: 12px;
+        box-shadow: 2px 2px black;
+      }
+    
     .java_injection {
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row-start: 4;
     }
+    #user_sum {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        font-variant: small-caps;
+      }
     #dialog {
         grid-column-start: 1;
         grid-column-end: span 2;
