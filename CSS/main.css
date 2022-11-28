@@ -400,6 +400,7 @@
   #alt_fun {
     grid-column-start: 1;
     grid-row-start: 2;
+    margin-left: 5%;
   }
   #refresh_page {
     grid-column-start: 2;
