@@ -5,16 +5,12 @@ function isEmpty() {
   var emptySum = document.getElementById("input_sum").value;
   var emptyTax = document.getElementById("input_tax").value;
   // This checks to see if the three input fields are not empty and do not include any negative numbers.
-  if (
-    emptyPercentage &&
-    emptySum &&
-    emptyTax !== "" &&
-    Math.sign(emptyPercentage && emptySum && emptyTax) !== -1
-  ) {
+  if (emptyPercentage < 0 || emptySum < 0 || emptyTax < 0) {
+    return popUp_two();
+  } else if (emptyPercentage && emptySum && emptyTax !== "") {
     onSubmit();
     return false;
   } else {
-    // If both conditions aren't met it will runt he popUp function
     popUp();
   }
 }
@@ -142,5 +138,24 @@ closePopEn.addEventListener("keypress", function (event) {
   // Then we check if the user has pressed the enter key. If so we close the dialog box.
   if (event.key == "Enter") {
     document.getElementById("dialog").style.display = "none";
+  }
+});
+
+
+function popUp_two() {
+  document.getElementById("dialog_2").style.display = "block";
+}
+
+function closePopUp_2() {
+  document.getElementById("dialog_2").style.display = "none";
+}
+
+// We are making a variable and giving it the value of element id hide
+var closePopEn = document.getElementById("hide_2");
+// Now we add the event listener
+closePopEn.addEventListener("keypress", function (event) {
+  // Then we check if the user has pressed the enter key. If so we close the dialog box.
+  if (event.key == "Enter") {
+    document.getElementById("dialog_2").style.display = "none";
   }
 });
